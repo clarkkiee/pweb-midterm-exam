@@ -1,0 +1,338 @@
+.App {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.post:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.post .title {
+  flex: 20%;
+  border-bottom: 1px solid lightgray;
+  background-color: dodgerblue;
+  display: grid;
+  place-content: center;
+  color: white;
+}
+
+.post .body {
+  flex: 60%;
+  display: grid;
+  place-content: center;
+}
+
+.post .postText {
+  flex: 60%;
+  display: grid;
+  place-content: center;
+}
+
+.post .footer {
+  flex: 20%;
+  border-top: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  background-color: dodgerblue;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer .username {
+  flex: 50%;
+}
+.footer .buttons {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.post .footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like {
+  display: flex;
+  align-self: center;
+  gap: 5px;
+  margin: 20px;
+}
+
+.likeBttn {
+  display: flex;
+  
+  color: rgba(250, 250, 250, 0.8);
+  
+}
+.unlikeBttn {
+  color: white;
+}
+
+.buttons label {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+/* CREATE POST PAGE CSS */
+
+.createPostPage {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 3px solid dodgerblue;
+  border-radius: 5px;
+}
+
+.formContainer #inputCreatePost {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.formContainer button {
+  margin-top: 15px;
+  height: 40px;
+  border: none;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  color: white;
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  background-color: dodgerblue;
+}
+
+span {
+  color: red;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar .links {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .loggedInContainer {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar button {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.navbar h1 {
+  text-align: right;
+  margin-right: 10px;
+  color: white;
+  font-weight: lighter;
+}
+
+/* INDIVIDUAL POST */
+.postPage {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.leftSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+}
+
+.rightSide {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.rightSide .addCommentContainer {
+  width: 100%;
+  height: 10px;
+  display: grid;
+  place-items: center;
+  margin-top: 25px;
+  height: max-content;
+  /* background-color:red; */
+}
+
+.addCommentContainer input,
+button {
+  margin-top: 90px;
+  /* margin-bottom: auto; checkpoint */
+  margin-bottom: auto;
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+}
+
+.addCommentContainer button {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+.addCommentContainer input {
+  margin-bottom:auto;
+  border: 2px solid dodgerblue;
+}
+
+.rightSide .listOfComments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightSide .xbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+.listOfComments .comment {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  padding: 40px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#individual {
+  height: 500px;
+  width: 600px;
+}
+
+#individual .title,
+#individual .footer {
+  font-size: 30px;
+}
+
+#individual .body {
+  font-size: 25px;
+}
+
+/* LOGIN */
+
+.loginContainer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+}
+
+.loginContainer input,
+button {
+  margin-top: 100px;
+  width: 300px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  margin: 10px;
+}
+
+.loginContainer button {
+  margin-top: 00px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+.loginContainer input {
+  border: 2px solid dodgerblue;
+}
+
+.notFound{
+  font-size: 30px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
